@@ -78,6 +78,9 @@ var BLUEJAY_SETTINGS_DESCRIPTIONS = {
                 },
                 {
                     name: 'BRAKE_ON_STOP', type: 'bool', label: 'escBrakeOnStop'
+                },
+                {
+                    name: 'BEEP_MELODY', type: 'data', label: '_Beep Melody'
                 }
             ]
         }

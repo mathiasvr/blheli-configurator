@@ -91,3 +91,27 @@ var Number = React.createClass({
         return val;
     }
 });
+
+var Data = React.createClass({
+    render: function() {
+        return (
+            <div className="data">
+                <label>
+                    <textarea
+                        rows={10}
+                        name={this.props.name}
+                        value={this.props.notInSync ? -1 : this.props.value}
+                        onChange={this.handleChange}
+                    >
+                    </textarea>
+                    <span className={this.props.notInSync ? "not-in-sync" : ""}>{hacks(this.props.label)}</span>
+                </label>
+            </div>
+        );
+
+    },
+    handleChange: function(e) {
+        console.log('data', e.target)
+        this.props.onChange(e.target.name, (e.target.value));
+    }
+});

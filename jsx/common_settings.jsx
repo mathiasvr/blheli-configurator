@@ -132,6 +132,18 @@ var CommonSettings = React.createClass({
                     />
                 );
             }
+            case 'data': {
+                // raw binary data
+                return (
+                    <Data
+                        name={desc.name}
+                        value={settings[desc.name]}
+                        label={desc.label}
+                        notInSync={notInSync}
+                        onChange={this.handleChange}
+                    />
+                );
+            }
             default: throw new Error('Logic error');
         }
     }
